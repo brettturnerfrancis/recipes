@@ -1,6 +1,6 @@
 import React from 'react';
 import { act, create } from 'react-test-renderer';
-import { mockData } from '../../mock/mockData';
+import { mockData } from '../mock/mockData';
 import SearchResults from './searchResults';
 import Recipe from '../Recipe/Recipe';
 

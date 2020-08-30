@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { mockData } from '../mock/mockData';  //TODO: replace with live data
+import { mockData } from './mock/mockData';  //TODO: replace with live data
 import './App.css';
-import SearchResults from './SearchResults/searchResults';
+import SearchResults from './SearchResults/SearchResults';
 
 function App() {
   const [searchResults, setSearchResults] = useState(mockData);

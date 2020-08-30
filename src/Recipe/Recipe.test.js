@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import Recipe from './Recipe';
-import { mockData } from '../../mock/mockData';
+import { mockData } from '../mock/mockData';
 
 const mockRecipe = mockData[0];
 
