@@ -29,7 +29,8 @@ describe('Search Results', () => {
     })
 
     it('reports record count for unfiltered results', () => {
-        expect(resultCount.props.children.join('')).toBe('3 recipes available')
+        console.log(resultCount.props.children)
+        expect(resultCount.props.children).toBe('3 recipes available')
     })
 
     it('reports record count for filtered results', () => {
@@ -37,6 +38,14 @@ describe('Search Results', () => {
             component.update(<SearchResults results={mockData} filtered={true} />)
         })
 
-        expect(resultCount.props.children.join('')).toBe('3 recipes match your search')
+        expect(resultCount.props.children).toBe('3 recipes match your search')
+    })
+
+    it('uses the singular form of "recipe" when appropriate', () => {
+        act(() => {
+            component.update(<SearchResults results={mockData.slice(0, 1)} filtered={true} />)
+        })
+
+        expect(resultCount.props.children).toBe('1 recipe matches your search')
     })
 })
