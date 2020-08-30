@@ -4,7 +4,7 @@ import Recipe from '../Recipe/Recipe';
 function SearchResults({ results }) {
     const recipes = results.map(result =>
         <Recipe
-            key={result.name}
+            key={result.id}
             recipe={result} />
     )
 

@@ -8,11 +8,9 @@ export class RecipeSearch {
 
     search = (terms) => {
         if (terms.replace(/\s/g, '').length) {
-            const matches = [];
-            this.searchIndex.search(terms, {expand: true}).forEach(result => {
-                matches.push(result)
+            return this.searchIndex.search(terms, {expand: true}).map(result => {
+                return this.searchIndex.documentStore.docs[result.ref];
             })
-            return matches;
         } else {
             return this.recipes;
         }
