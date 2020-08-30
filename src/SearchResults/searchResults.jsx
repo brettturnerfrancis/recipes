@@ -9,9 +9,7 @@ function SearchResults({ results, filtered }) {
         <Recipe
             key={result.id}
             recipe={result} />
-    ),
-        resultText = filtered ? `match your search` : `available`,
-        pluralize = results.length === 1 ? 'recipes' : 'recipes';
+    );
 
     const buildTextString = () => {
         const recipes = results.length === 1 ? 'recipe' : 'recipes',
