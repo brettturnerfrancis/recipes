@@ -1,5 +1,6 @@
 export const mockData = [
     {
+        id: 1,
         name: 'Coffee Creme Caramel',
         source: 'Bon Appetit',
         tags: [
@@ -7,6 +8,7 @@ export const mockData = [
         ]
     },
     {
+        id: 2,
         name: 'Heirloom Tomato Focaccia',
         source: 'FOOD52',
         tags: [
@@ -14,10 +16,12 @@ export const mockData = [
         ]
     },
     {
+        id: 3,
         name: 'Soy-Marinated Eggs',
         source: 'Bon Appetit',
         tags: [
-            'asian'
+            'asian',
+            'snack'
         ]
     }
 ]
