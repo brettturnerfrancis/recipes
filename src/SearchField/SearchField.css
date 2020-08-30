@@ -1,0 +1,18 @@
+.search-field {
+    padding: 1rem 0.5rem;
+    background: #457b9dff;
+}
+
+.search-field__input {
+    padding: 0.5rem;
+    border: #1d3557ff;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 350px;
+}
+
+::placeholder {
+    font-weight: 200;
+    font-style: italic;
+    color: #888
+}

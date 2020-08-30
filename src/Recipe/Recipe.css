@@ -1,0 +1,17 @@
+.recipe {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    background: white;
+    transition: background 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+
+.recipe:hover {
+    background: #f1faeeff;
+}
+
+.recipe__source {
+    font-weight: 200;
+    font-style: italic;
+    color: #555;
+    font-size: 0.875rem;
+}
