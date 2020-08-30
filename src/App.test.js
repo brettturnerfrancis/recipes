@@ -1,9 +1,22 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { act, create } from 'react-test-renderer';
 import App from './App';
+import SearchResults from './SearchResults/searchResults';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App', () => {
+  let component, instance;
+
+  beforeEach(() => {
+    act(() => {
+      component = create(<App />)
+    });
+
+    instance = component.root;
+  });
+  
+  it('passes a collection of recipes to the search results component', () => {
+    const searchResults = instance.findByType(SearchResults);
+
+    expect(searchResults.props.results.length).toBeDefined()
+  })
+})
