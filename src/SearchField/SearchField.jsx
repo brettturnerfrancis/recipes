@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function SearchField({updateSearchTerms}) {
     // searchTerms state is not lifted to parent because a future update will incorporate a debounce
@@ -8,6 +8,10 @@ function SearchField({updateSearchTerms}) {
         setSearchTerms(value);
         updateSearchTerms(value)
     }
+
+    useEffect(() => {
+        updateSearchTerms(searchTerms)
+    }, [searchTerms])
 
     return (
         <input onChange={handleChange} value={searchTerms} />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { mockData } from './mock/mockData';  //TODO: replace with live data
 import './App.css';
 import SearchResults from './SearchResults/SearchResults';
@@ -17,10 +17,6 @@ function App() {
   }
 
   searchEngine.init(mockData)
-
-  useEffect(() => {
-    setSearchResults(searchEngine.search(''));
-  }, [])
 
   return (
     <div className="App">
