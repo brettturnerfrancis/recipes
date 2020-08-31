@@ -5,7 +5,8 @@ export const mockData = [
         source: 'Bon Appetit',
         tags: [
             'dessert',
-        ]
+        ],
+        location: 'https://brettturnerfrancis.github.io/recipes/mock-s3/coffee-creme-caramel.jpg'
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const mockData = [
         source: 'FOOD52',
         tags: [
             'bread'
-        ]
+        ],
+        location: 'https://brettturnerfrancis.github.io/recipes/mock-s3/heirloom-tomato-focaccia.pdf'
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ export const mockData = [
         tags: [
             'asian',
             'snack'
-        ]
+        ],
+        location: 'https://brettturnerfrancis.github.io/recipes/mock-s3/soy-marinated-eggs.jpg'
     }
 ]

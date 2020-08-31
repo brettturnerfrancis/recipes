@@ -29,7 +29,6 @@ describe('Search Results', () => {
     })
 
     it('reports record count for unfiltered results', () => {
-        console.log(resultCount.props.children)
         expect(resultCount.props.children).toBe('3 recipes available')
     })
 
