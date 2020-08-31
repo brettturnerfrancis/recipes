@@ -1,41 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { act, create } from 'react-test-renderer';
 import Recipe from './Recipe';
 import { mockData } from '../mock/mockData';
 
 const mockRecipe = mockData[0];
 
 describe('recipe', () => {
-    let container;
+    let component, instance;
 
     beforeEach(() => {
-        container = document.createElement('div');
-        document.body.appendChild(container);
-    });
-
-    afterEach(() => {
-        document.body.removeChild(container);
-        container = null;
-    });
-
-    it('displays the title', () => {
         act(() => {
-            ReactDOM.render(<Recipe recipe={mockRecipe} />, container);
+            component = create(<Recipe recipe={mockRecipe} />)
         });
 
-        const title = container.querySelector('[data-id="recipe-name"]');
+        instance = component.root;
+    })
 
-        expect(title.textContent).toBe(mockRecipe.name);
+    it('displays the title', () => {
+        const title = instance.findByProps({'data-id':'recipe-name'});
+
+        expect(title.props.children).toBe(mockRecipe.name);
     })
 
     it('displays the recipe source', () => {
-        act(() => {
-            ReactDOM.render(<Recipe recipe={mockRecipe} />, container);
-        });
+        const source = instance.findByProps({'data-id':'recipe-source'});
 
-        const source = container.querySelector('[data-id="recipe-source"]');
-
-        expect(source.textContent).toBe(mockRecipe.source);
+        expect(source.props.children).toBe(mockRecipe.source);
     })
 });

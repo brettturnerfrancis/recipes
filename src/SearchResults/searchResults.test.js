@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, create, update } from 'react-test-renderer';
+import { act, create } from 'react-test-renderer';
 import { mockData } from '../mock/mockData';
 import SearchResults from './searchResults';
 import Recipe from '../Recipe/Recipe';
