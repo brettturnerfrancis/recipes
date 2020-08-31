@@ -3,6 +3,8 @@
     background: white;
     transition: background 0.2s ease;
     margin-bottom: 0.5rem;
+    display: block;
+    text-decoration: none;
 }
 
 .recipe:hover {
